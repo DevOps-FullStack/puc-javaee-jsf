@@ -40,6 +40,7 @@ public class ClienteBusiness {
 		clienteResource.setId(clienteEntity.getId());
 		clienteResource.setNome(clienteEntity.getNome());
 		clienteResource.setEmail(clienteEntity.getEmail());
+		clienteResource.setCpf(clienteEntity.getCpf());
 		clienteResource.setDataNascimento(clienteEntity.getDataNascimento());
 
 		return clienteResource;
@@ -51,6 +52,7 @@ public class ClienteBusiness {
 		clienteEntity.setId(clienteResource.getId());
 		clienteEntity.setNome(clienteResource.getNome());
 		clienteEntity.setEmail(clienteResource.getEmail());
+		clienteEntity.setCpf(clienteResource.getCpf());
 		clienteEntity.setDataNascimento(clienteResource.getDataNascimento());
 
 		return clienteEntity;

@@ -6,7 +6,6 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 import br.pucminas.aulapratica.jee.trabalho_jee.entity.ClienteEntity;
-import br.pucminas.aulapratica.jee.trabalho_jee.resource.ClienteResource;
 
 public class ClienteRepository {
 
@@ -23,7 +22,7 @@ public class ClienteRepository {
 	}
 
 	public List<ClienteEntity> listar() {
-		return em.createQuery("from Cliente").getResultList();
+		return em.createQuery("from ClienteEntity", ClienteEntity.class).getResultList();
 	}
 
 }

@@ -15,20 +15,27 @@
 	            <f:facet name="header">Id</f:facet>
 	            <!-- Neste ponto deverá ser exibido o valor que se deseja nesta coluna usando JSF. O mesmo deve ser feito
 	            para as outras colunas -->
+	            #{cliente.id}
 	         </h:column>
 	         <h:column>
 	            <f:facet name="header">Nome do Cliente</f:facet>
+	            #{cliente.nome}
 	         </h:column>
 	         <h:column>
 	            <f:facet name="header">CPF do Cliente</f:facet>
+	            #{cliente.cpf}
 	         </h:column>
 	         <h:column>
 	            <f:facet name="header">Email do Cliente</f:facet>
+	            #{cliente.email}
 	         </h:column>
 	         <h:column>
 	            <f:facet name="header">Nascimento do Cliente</f:facet>
 				<!-- Esta coluna tem um comportaento particular, pois deve exibir a data formatada com padrão dd/MM/yyyy -->
-	         </h:column>
+				<h:outputFormat value="#{cliente.dataNascimento}">
+					<f:convertDateTime pattern="dd/MM/yyyy"/>
+				</h:outputFormat>
+	         </h:column>	         
 	      </h:dataTable>
 	      <p>
             <!-- Neste ponto, deve-se incluir o botão de voltar conforme o desafio 2 apresentado no laboratório. -->
